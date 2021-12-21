@@ -1,0 +1,72 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    user-select: none; 
+}
+
+:root{
+    --text-color: rgb(37, 37, 37);
+}
+
+body{
+    margin: 0; 
+    display: flex;
+    justify-content: center;
+    align-items:center; 
+    min-height: 100vh;
+    color: var(--text-color);
+}
+
+.world {
+    overflow:hidden; 
+    position: relative;
+}
+
+.score, .previous-score {
+    position: absolute;  
+    font-size: 3vmin; 
+    top: 1vmin; 
+    color: inherit;
+}
+
+.score{
+    right: 1vmin;
+}
+
+.previous-score{
+    left: 1vmin; 
+}
+
+.start-screen {
+    position: absolute; 
+    font-size: 5vmin; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+
+.hide {
+    display: none;
+}
+
+.ground {
+    --left: 0;
+    position: absolute; 
+    left: calc(var(--left) * 1%);
+    width: 300%;
+    bottom: 0;
+}
+
+.dino {
+    --bottom:0;
+    position: absolute; 
+    left: 1%; 
+    height: 30%; 
+    bottom: calc(var(--bottom) * 1%);
+}
+
+.cactus {
+    position: absolute; 
+    height: 30%; 
+    left: calc(var(--left) * 1%);
+    bottom: 0;
+}
